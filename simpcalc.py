@@ -6,7 +6,6 @@ root.title("Simple Calculator")
 e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
-
 def button_click(number):
 
 	current = e.get()
@@ -40,8 +39,6 @@ def button_equal():
 	if math == "division":
 		e.insert(0, f_num / int(second_number))
 
-
-
 def button_subtract():
 	first_number = e.get()
 	global f_num
@@ -66,9 +63,6 @@ def button_divide():
 	f_num = int(first_number)
 	e.delete(0, END)
 
-
-# Define Buttons
-
 button_1 = Button(root, text="1", padx=40, pady=20, command=lambda: button_click(1))
 button_2 = Button(root, text="2", padx=40, pady=20, command=lambda: button_click(2))
 button_3 = Button(root, text="3", padx=40, pady=20, command=lambda: button_click(3))
@@ -86,8 +80,6 @@ button_clear = Button(root, text="Clear", padx=79, pady=20, command=button_clear
 button_subtract = Button(root, text="-", padx=41, pady=20, command=button_subtract)
 button_multiply = Button(root, text="*", padx=40, pady=20, command=button_multiply)
 button_divide = Button(root, text="/", padx=41, pady=20, command=button_divide)
-
-# Put the buttons on the screen
 
 button_1.grid(row=3, column=0)
 button_2.grid(row=3, column=1)
@@ -109,11 +101,6 @@ button_equal.grid(row=5, column=1, columnspan=2)
 button_subtract.grid(row=6, column=0)
 button_multiply.grid(row=6, column=1)
 button_divide.grid(row=6, column=2)
-
-
-
-
-
 
 
 root.mainloop()
